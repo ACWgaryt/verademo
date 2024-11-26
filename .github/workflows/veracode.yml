@@ -34,7 +34,7 @@ jobs:
     - uses: actions/checkout@v4
       with:
         repository: 'ACWgaryt/verademo'
-    - run: cd app
+        working-directory: app  # Specify the directory where your pom.xml is located
     - run: mvn clean package
 
     # download the Veracode Static Analysis Pipeline scan jar
