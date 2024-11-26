@@ -31,7 +31,7 @@ jobs:
 
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it and copies all sources into ZIP file for submitting for analysis. Replace this section with your applications build steps
     
-    - run: cd ../../app/
+    - run: pwd
     - run: mvn clean package
 
     # download the Veracode Static Analysis Pipeline scan jar
