@@ -46,4 +46,5 @@ jobs:
         vkey: ${{secrets.VERACODE_API_KEY}}
     # scan timeout
         scantimeout: 300
-          
+        
+    - run: echo "Results URL: https://analysiscenter.veracode.com/auth/index.jsp#ViewReportsResultSummary:${{ steps.veracode_scan.outputs.scan_id }}"
