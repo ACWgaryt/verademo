@@ -16,7 +16,7 @@ on:
 
 jobs:
   # This workflow contains a job to build and submit pipeline scan, you will need to customize the build process accordingly and make sure the artifact you build is used as the file input to the pipeline scan file parameter
-  build-and-pipeline-scan:
+  build-and-upload-scan:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     steps:
@@ -44,4 +44,6 @@ jobs:
         vid: ${{secrets.VERACODE_API_ID}}
     # vkey
         vkey: ${{secrets.VERACODE_API_KEY}}
+    # scan timeout
+        scantimeout: 300
           
